@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./styles/output.css">
-    
+    <script src="./script/burgers.js"></script>
+    <script src="./script/bebidas.js"></script>
     <link rel="icon" href="./img/logo.png">
     <title>Let's Go Burger</title>
 </head>
 <body>
-
     <!-- HEADER -->
     <header class="w-full h-[420px] bg-home bg-cover bg-center">
         <div class="w-full h-full flex flex-col justify-center items-center">
@@ -36,123 +36,20 @@
     <h2 class="text-2xl md:text-4xl font-bold text-center mt-10 mb-10">
         Conheça nosso cardápio
     </h2>
+
     <!-- INICIO MENU -->
     <div id="menu">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6 mx-auto max-w-7xl px-2">
-            BURGERS
-        </h2>
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-10">
-            <!-- BURG -->
-            <div class="p-2 flex gap-2">
-                <img src="./img/bg-2 1.png" alt="Burger 1" class="w-28 h-28 rounded-md">
-                <div>
-                    <p class="font-bold">Cheese Burger Duplo</p>
-                    <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.</p>
-                    <div class="flex items-center gap-2 justify-between mt-2">
-                        <p class="font-bold text-lg">R$ 18,90</p>
-                        <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:scale-125 duration-200"
-                         data-name="Cheese Burger Duplo" 
-                         data-price="18.90">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- FIM BURG -->
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 mx-auto max-w-7xl px-2">BURGERS</h2>
+        <!-- GRID BURGERS -->
+        <main id="burger-container" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-10"></main>
+        <!-- FIM GRID BURGERS -->
 
-            <!-- BURG -->
-            <div class="p-2 flex gap-2">
-                <img src="./img/bg-2 1.png" alt="Burger 1" class="w-28 h-28 rounded-md">
-                <div>
-                    <p class="font-bold">Cheese Burger</p>
-                    <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.</p>
-                    <div class="flex items-center gap-2 justify-between mt-2">
-                        <p class="font-bold text-lg">R$ 10,90</p>
-                        <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:scale-125 duration-200"
-                         data-name="Cheese Burger" 
-                         data-price="10.90">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- FIM BURG -->
-            <!-- BURG -->
-            <div class="p-2 flex gap-2">
-                <img src="./img/bg-2 1.png" alt="Burger 1" class="w-28 h-28 rounded-md">
-                <div>
-                    <p class="font-bold">Cheese Burger 3</p>
-                    <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.</p>
-                    <div class="flex items-center gap-2 justify-between mt-2">
-                        <p class="font-bold text-lg">R$ 23,90</p>
-                        <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:scale-125 duration-200"
-                         data-name="Cheese Burger 3" 
-                         data-price="23.90">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- FIM BURG -->
-            <!-- BURG -->
-            <div class="p-2 flex gap-2">
-                <img src="./img/bg-2 1.png" alt="Burger 1" class="w-28 h-28 rounded-md">
-                <div>
-                    <p class="font-bold">Cheese Burger 4</p>
-                    <p class="text-sm">Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.</p>
-                    <div class="flex items-center gap-2 justify-between mt-2">
-                        <p class="font-bold text-lg">R$ 13,90</p>
-                        <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:scale-125 duration-200"
-                         data-name="Cheese Burger 4" 
-                         data-price="13.90">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- FIM BURG -->
-        </main>
-        <h2 class="text-3xl md:text-4xl font-bold mb-6 mx-auto max-w-7xl px-2">
-            BEBIDAS
-        </h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 mx-auto max-w-7xl px-2">BEBIDAS</h2>
         <!-- GRID BEBIDAS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-28" id="menu">
-            <!-- BEBIDA -->
-            <div class="p-2 flex w-full gap-2">
-                <img src="./img/refri-1.png" alt="Burger 1" class="w-24 h-24 rounded-md">
-                <div class="w-full">
-                    <p class="font-bold">Cola cola lata</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 6,90</p>
-                        <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:scale-125 duration-200"
-                         data-name="Cola cola lata" 
-                         data-price="6.90">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- FIM BEBIDA -->
-            <!-- BEBIDA -->
-            <div class="p-2 flex w-full gap-2">
-                <img src="./img/refri-1.png" alt="Burger 1" class="w-24 h-24 rounded-md">
-                <div class="w-full">
-                    <p class="font-bold">Guaraná lata</p>
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$ 6,90</p>
-                        <button class="bg-green-600 px-5 rounded add-to-cart-btn hover:scale-125 duration-200"
-                         data-name="Guaraná lata" 
-                         data-price="6.90">
-                            <i class="fa fa-cart-plus text-lg text-white"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <!-- FIM BEBIDA -->
-        </div>
+        <div id="bebidas-container" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-28"></div>
         <!-- FIM GRID BEBIDAS -->
     </div>
-    <!-- FIM INICIO MENU -->
+    <!-- FIM MENU -->
 
     <!-- MODAL CART -->
     <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
