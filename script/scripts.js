@@ -187,7 +187,7 @@ checkoutBtn.addEventListener("click", function(){
 
     window.open(`https://wa.me/${telefone}?text=${menssagem} Endereço: ${addressInput.value}`, "_balnk")
 
-    Toastify({
+    /*Toastify({
         text: "Pedido Finalizado! Por favor, aconpanhar pelo whatsapp.",
         duration: 7000,
         newWindow: true,
@@ -198,7 +198,8 @@ checkoutBtn.addEventListener("click", function(){
         style: {
         background: "linear-gradient(to right, #00b09b, #96c93d)"
         },
-    }).showToast();
+    }).showToast();*/
+    alert("Pedido Finalizado! Por favor, aconpanhar pelo whatsapp.")
     cart = [];
     addressInput.value = "";
     updateCartModal();
