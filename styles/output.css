@@ -679,6 +679,10 @@ video {
   top: 0.5rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -689,6 +693,10 @@ video {
 
 .z-\[99\] {
   z-index: 99;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .float-start {
