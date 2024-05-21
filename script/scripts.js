@@ -35,14 +35,15 @@ menu.addEventListener("click", function(event){
     if(parentButton){
         const name = parentButton.getAttribute("data-name")
         const price = parseFloat(parentButton.getAttribute("data-price"))
+        const valor = parentButton.getAttribute("data-valor")
         
         // Adicionar no carrinho
-        addToCart(name,price)
+        addToCart(name,price,valor)
     }
 })
 
 // função para adicionar no carrinho
-function addToCart(name,price){
+function addToCart(name,price,valor){
     const existeItem = cart.find(item => item.name === name)
 
     if(existeItem){
@@ -52,6 +53,7 @@ function addToCart(name,price){
     else{
         cart.push({
             name,
+            valor,
             price,
             quantity: 1,
         })
@@ -73,7 +75,7 @@ function updateCartModal(){
                 <div>
                     <p class="font-bold" >${item.name}</p>
                     <p>Quantidade: ${item.quantity}</p>
-                    <p class="font-bold mt-2">R$ ${item.price.toFixed(2)}</p>
+                    <p class="font-bold mt-2">R$ ${item.valor}</p>
                 </div>
 
                 <button class="remove-item-btn" data-name="${item.name}" >Remover</button>
@@ -209,7 +211,7 @@ checkoutBtn.addEventListener("click", function(){
 function verificarHorario(){
     const data = new Date()
     const hora = data.getHours();
-    return hora >= 18 && hora < 22;
+    return hora >= 18 && hora < 23;
 }
 
 const spanHorario = document.getElementById("date-span")
@@ -223,3 +225,14 @@ else{
     spanHorario.classList.remove("bg-gree-600")
     spanHorario.classList.add("bg-red-500")
 }
+
+// Captura o clique nos links e rola suavemente para a seção correspondente
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
