@@ -2818,6 +2818,18 @@ nav a:hover{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:justify-evenly {
+    justify-content: space-evenly;
+  }
+
   .md\:gap-10 {
     gap: 2.5rem;
   }
