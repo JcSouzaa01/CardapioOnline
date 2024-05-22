@@ -8,6 +8,7 @@ const closeModalBtn = document.getElementById("close-modal-btn")
 const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
+const body = document.getElementById("body")
 
 let cart = [];
 
@@ -15,18 +16,21 @@ let cart = [];
 cartBtn.addEventListener("click", function(){
     updateCartModal();
     cartModal.style.display = "flex"
+    body.style.overflow = "hidden"
 })
 
 //fechar moral carrinho
 cartModal.addEventListener("click", function(event){
     if(event.target === cartModal){
         cartModal.style.display = "none"
+        body.style.overflow = "auto"
     }
 })
 
 //fechar no botão FECHAR
 closeModalBtn.addEventListener("click", function(){
     cartModal.style.display = "none"
+    body.style.overflow = "auto"
 })
 
 
@@ -190,7 +194,7 @@ checkoutBtn.addEventListener("click", function(){
     window.open(`https://wa.me/${telefone}?text=${menssagem} Endereço: ${addressInput.value}`, "_balnk")
 
     Toastify({
-        text: "Pedido Finalizado! Por favor, aconpanhar pelo whatsapp.",
+        text: "Pedido Finalizado! Por favor, acompanhar pelo whatsapp.",
         duration: 8000,
         newWindow: true,
         close: true,

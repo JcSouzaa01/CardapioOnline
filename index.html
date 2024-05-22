@@ -18,24 +18,30 @@
     <link rel="icon" href="./img/logo.png">
     <title>Let's Go Burger</title>
 </head>
-<body>
+<body id="body">
     <!-- HEADER -->
     <header class="w-full h-[420px] bg-home bg-cover bg-center">
         <div class="w-full h-full flex flex-col justify-center items-center">
+            
             <img src="./img/logo.png" alt="Logo lets" 
             class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
-            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">
+            <h1 class="text-4xl mt-4 mb-4 font-bold text-white">
                 LET's GO BURGER
             </h1>
-
-            <ul class="">
-                <a class="text-white font-medium" 
-                    href="https://www.google.com/maps/place/R.+Gilberto+Vieira+Leite,+423+-+Tabuleiro+do+Martins,+Maceió+-+AL,+57060-175/@-9.5981522,-35.7691366,17z/data=!3m1!4b1!4m6!3m5!1s0x70148e9990ec9cd:0x585376631de4e2ce!8m2!3d-9.5981522!4d-35.7691366!16s%2Fg%2F11hb6st2lc?entry=ttu">
-                    Trav. Rio da Silva, 423, Santa Amélia</a>
-            </ul>
         
-            <div class="bg-green-600 px-4 py-1 rounded-lg mt-4" id="date-span">
+            <div class="bg-green-600 px-4 py-1 rounded-lg" id="date-span">
                 <span class="font-medium">Ter a Dom - 18:00 às 23:00</span>
+            </div>
+
+            <ul class="mt-4">
+                <a class="flex gap-1 justify-center items-center text-white" 
+                    href="https://www.google.com/maps/place/R.+Gilberto+Vieira+Leite,+423+-+Tabuleiro+do+Martins,+Maceió+-+AL,+57060-175/@-9.5981522,-35.7691366,17z/data=!3m1!4b1!4m6!3m5!1s0x70148e9990ec9cd:0x585376631de4e2ce!8m2!3d-9.5981522!4d-35.7691366!16s%2Fg%2F11hb6st2lc?entry=ttu">
+                    <img class="w-5 h-5" src="./img/google-maps.png" alt="maps"> Trav. Rio da Silva, 423, Santa Amélia</a>
+            </ul>
+
+            <div class="flex gap-2 mt-2 md:gap-4">
+                <a class="flex gap-1 justify-center items-center  text-white" href="https://wa.me/82999211763"> <img src="./img/whatsapp-2.png" alt="whatsapp" class="w-5 h-5"> Whatsapp</a>
+                <a class="flex gap-1 justify-center items-center  text-white" href="https://www.instagram.com/letsgoburgermaceio/"><img src="./img/instagram-2.png" alt="whatsapp" class="w-5 h-5"> @letsgoburgermaceio</a>
             </div>
 
         </div>
@@ -46,36 +52,47 @@
         Conheça nosso cardápio
     </h2>
 
-    <nav class="flex mx-auto max-w-72 justify-evenly mb-10 items-center sticky top-2 p-1 bg-[#f6f7f8] rounded border-2 border-gray-400 border-solid ">
-        <ul class=" p-2">
-            <a href="#burgers">Let's Burgers</a>
-        </ul>
+    <!-- COMEÇO NAV-->
+    <nav class="flex mx-auto max-w-7xl gap-3 justify-evenly items-center sticky top-2 p-1 bg-[#f6f7f8] rounded border-2 border-gray-400 border-solid overflow-x-auto overflow-hidden ">
+        <a class="p-2 text-center" href="#artesanal">Burgers Artesanal</a>
         <div class="cursor-default">|</div>
-        <ul class=" p-2">
-            <a href="#bebidas">Bebidas</a>
-        </ul>
+        <a class="p-2 text-center" href="#tradicional">Burgers Tradicional</a>
+        <div class="cursor-default">|</div>
+        <a class="p-2 text-center" href="#bebidas">Bebidas</a>
+        <div class="cursor-default">|</div> 
+        <a class="p-2 text-center" href="#sobremesa">Sobremesas</a>
     </nav>
-    
+    <!-- FIM NAV-->
 
     <!-- INICIO MENU -->
     <div id="menu">
-        <h2 id="burgers" class="text-3xl md:text-4xl mb-6 mx-auto max-w-7xl px-2">LET's BURGERS</h2>
+        <h2 id="artesanal" class="text-3xl md:text-4xl mb-10 mx-auto max-w-7xl px-2 pt-24">Burgers Artesanal</h2>
         <!-- GRID BURGERS -->
-        <main id="burger-container" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-10"></main>
+        <main id="burger-container" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 "></main>
         <!-- FIM GRID BURGERS -->
 
-        <h2 id="bebidas" class="text-3xl md:text-4xl mb-6 mx-auto max-w-7xl px-2">BEBIDAS</h2>
+        <h2 id="tradicional" class="text-3xl md:text-4xl mb-10 mx-auto max-w-7xl px-2 pt-24">Burgers Tradicional</h2>
+        <!-- GRID BURGERS -->
+        <main id="burger-container2" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 "></main>
+        <!-- FIM GRID BURGERS -->
+
+        <h2 id="bebidas" class="text-3xl md:text-4xl mb-10 mx-auto max-w-7xl px-2 pt-24">Bebidas</h2>
         <!-- GRID BEBIDAS -->
-        <div id="bebidas-container" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-28"></div>
+        <div id="bebidas-container" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 "></div>
+        <!-- FIM GRID BEBIDAS -->
+
+        <h2 id="sobremesa" class="text-3xl md:text-4xl mb-10 mx-auto max-w-7xl px-2 pt-24">Sobremesas</h2>
+        <!-- GRID BEBIDAS -->
+        <div id="bebidas-container2" class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-28"></div>
         <!-- FIM GRID BEBIDAS -->
     </div>
     <!-- FIM MENU -->
 
     <!-- MODAL CART -->
     <div id="cart-modal" class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <div class="bg-white p-6 rounded-md min-w-[90%] h-[60%] md:min-w-[600px] overflow-auto">
 
-            <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+            <h2 class="text-center font-bold text-2xl mb-4">Meu Carrinho</h2>
 
             <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
 
