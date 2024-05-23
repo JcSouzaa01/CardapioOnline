@@ -9,6 +9,8 @@ const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
 const body = document.getElementById("body")
+const obsInput = document.getElementById("observacao")
+const pagInput = document.getElementById("pagamento") 
 
 let cart = [];
 
@@ -175,6 +177,21 @@ checkoutBtn.addEventListener("click", function(){
 
         return;
     }
+    if(pagInput.value === ""){
+        Toastify({
+            text: "Selecione uma forma de pagamento!",
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+            background: "#ef4444"
+            },
+        }).showToast();
+        return;
+    }
     if(addressInput.value === ""){
         addressWarn.classList.remove("hidden")
         addressInput.classList.add("border-red-500")
@@ -191,7 +208,7 @@ checkoutBtn.addEventListener("click", function(){
     const menssagem = encodeURIComponent(cartItems)
     const telefone = "82999211763"
 
-    window.open(`https://wa.me/${telefone}?text=${menssagem} Endereço: ${addressInput.value}`, "_balnk")
+    window.open(`https://wa.me/${telefone}?text=${menssagem} Forma de Pagamento: ${pagInput.value} Endereço: ${addressInput.value} Observação: ${obsInput.value}`, "_balnk")
 
     Toastify({
         text: "Pedido Finalizado! Por favor, acompanhar pelo whatsapp.",
@@ -206,7 +223,9 @@ checkoutBtn.addEventListener("click", function(){
         },
     }).showToast();
     cart = [];
+    pagInput.value = "";
     addressInput.value = "";
+    obsInput.value = "";
     updateCartModal();
     
 })
@@ -215,7 +234,9 @@ checkoutBtn.addEventListener("click", function(){
 function verificarHorario(){
     const data = new Date()
     const hora = data.getHours();
-    return hora >= 18 && hora < 23;
+    const diaSemana = data.getDay()
+
+    return hora >= 18 && hora < 23 && diaSemana !== 2;
 }
 
 const spanHorario = document.getElementById("date-span")

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,14 +33,15 @@
                 <span class="font-medium">Ter a Dom - 18:00 às 23:00</span>
             </div>
 
-            <ul class="mt-4">
+            <ul class="mt-6">
                 <a class="flex gap-1 justify-center items-center text-white" 
                     href="https://www.google.com/maps/place/R.+Gilberto+Vieira+Leite,+423+-+Tabuleiro+do+Martins,+Maceió+-+AL,+57060-175/@-9.5981522,-35.7691366,17z/data=!3m1!4b1!4m6!3m5!1s0x70148e9990ec9cd:0x585376631de4e2ce!8m2!3d-9.5981522!4d-35.7691366!16s%2Fg%2F11hb6st2lc?entry=ttu">
                     <img class="w-5 h-5" src="./img/google-maps.png" alt="maps"> Trav. Rio da Silva, 423, Santa Amélia</a>
             </ul>
 
-            <div class="flex gap-2 mt-2 flex-col md:flex-row md:gap-4">
-                <a class="flex gap-1 justify-center items-center  text-white" href="https://wa.me/82999211763"> <img src="./img/whatsapp-2.png" alt="whatsapp" class="w-5 h-5"> Whatsapp</a>
+            <div class="flex mt-2 flex-col md:flex-row md:gap-4">
+                <a class="flex gap-1 justify-center items-center  text-white" href="https://wa.me/82999211763"> 
+                    <img src="./img/whatsapp-2.png" alt="whatsapp" class="w-5 h-5"> (82) 9 9988-9814</a>
                 <a class="flex gap-1 justify-center items-center  text-white" href="https://www.instagram.com/letsgoburgermaceio/"><img src="./img/instagram-2.png" alt="whatsapp" class="w-5 h-5"> @letsgoburgermaceio</a>
             </div>
 
@@ -53,7 +54,7 @@
     </h2>
 
     <!-- COMEÇO NAV-->
-    <nav class="flex mx-auto max-w-7xl gap-3 md:justify-evenly items-center sticky top-2 p-1 bg-[#f6f7f8] rounded border-2 border-gray-400 border-solid overflow-x-auto overflow-hidden ">
+    <nav class="flex text-sm md:text-base mx-auto max-w-7xl gap-3 justify-between md:justify-evenly items-center sticky top-2 p-1 bg-[#f6f7f8] rounded border-2 border-gray-400 border-solid overflow-x-auto overflow-hidden ">
         <a class="p-2 text-center" href="#artesanal">Burgers Artesanal</a>
         <div class="cursor-default">|</div>
         <a class="p-2 text-center" href="#tradicional">Burgers Tradicional</a>
@@ -97,15 +98,32 @@
             <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
 
             <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
-            <P class="font-bold mt-4">Endereço de entrega: </P>
             
-            <input 
+            <div class="mt-4">
+                <label class="font-bold" >Forma de pagamento:</label>
+                <select id="pagamento" class="p-2 rounded bg-gray-300">
+                    <option value="" disabled selected class="bg-white">Selecione</option>
+                    <option class="bg-white">PIX</option>
+                    <option class="bg-white" >Dinheiro</option>
+                    <option class="bg-white">Cartão</option>
+                </select>
+            </div>
+            
+            
+            <P class="font-bold mt-4">Endereço de entrega: </P>
+            <input
             type="text"
             placeholder="Digite seu endereço completo..."
             id="address"
             class="w-full border-2 p-1 rounded my-1">
-            
             <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+
+            <P class="font-bold mt-4">Observação: </P>
+            <textarea
+            id="observacao"
+            class="w-full border-2 p-1 rounded my-1"
+            placeholder="Retirar salada, ovo, tomate..."
+            ></textarea>
 
             <div class="flex items-center justify-between mt-5 w-full">
                 
