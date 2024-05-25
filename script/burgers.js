@@ -1,32 +1,32 @@
 document.addEventListener('DOMContentLoaded', function () {
     const burgers = [
         {
-            name: 'Cheese Burger Duplo',
-            description: 'Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.',
-            valor: '18,90',
-            price: 18.90,
-            image: './img/bg-2 1.png'
+            name: "Let's Go Simples",
+            description: 'Burger artesanal 150g, queijo cheddar, presunto e salada.',
+            valor: '16,49',
+            price: 16.49,
+            image: './img/Burger/bg-2 1.png'
         },
         {
-            name: 'Cheese Burger 2',
-            description: 'Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.',
-            valor: '10,90',
-            price: 10.90,
-            image: './img/bg-2 1.png'
+            name: "Let's Go Eggs",
+            description: 'Burger artesanal 150g, ovo, queijo cheddar, presunto e salada.',
+            valor: '17,49',
+            price: 17.49,
+            image: './img/Burger/bg-2 1.png'
         },
         {
-            name: 'Cheese Burger 3',
-            description: 'Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.',
-            valor: '11,90',
-            price: 11.90,
-            image: './img/bg-2 1.png'
+            name: "Let's Go Bacon",
+            description: 'Burger artesanal 150g, chips de bacon, queijo cheddar, presunto e salada.',
+            valor: '24,49',
+            price: 24.49,
+            image: './img/Burger/bg-2 1.png'
         },
         {
-            name: 'Cheese Burger 4',
-            description: 'Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.',
-            valor: '12,90',
-            price: 12.90,
-            image: './img/bg-2 1.png'
+            name: "Let's Go Duplo",
+            description: 'Burger artesanal 150g (2), queijo cheddar (2), presunto (2), cebola caramelizada e salada.',
+            valor: '28,99',
+            price: 28.99,
+            image: './img/Burger/bg-2 1.png'
         }
     ];
 
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         burgerElement.className = 'p-2 flex gap-2 items-center';
         burgerElement.innerHTML = `
             <img src="${burger.image}" alt="${burger.name}" class="w-28 h-28 rounded-md">
-            <div>
+            <div class="w-full">
                 <p class="font-bold">${burger.name}</p>
                 <p class="text-sm">${burger.description}</p>
                 <div class="flex items-center gap-2 justify-between mt-2">
@@ -58,32 +58,39 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const burgers1 = [
         {
-            name: 'Cheese Burger Duplo22',
-            description: 'Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.',
-            valor: '18,90',
-            price: 18.90,
-            image: './img/bg-2 1.png'
+            name: "Let's Go Calabresa",
+            description: 'Calabresa fatiada 170g, ovo, queijo cheddar, presunto e salada.',
+            valor: '16,49',
+            price: 16.49,
+            image: './img/Burger/bg-2 1.png'
         },
         {
-            name: 'Cheese Burger 22222',
-            description: 'Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.',
-            valor: '10,90',
-            price: 10.90,
-            image: './img/bg-2 1.png'
+            name: "Let's Go Frango",
+            description: 'Frango em cubos 170g, ovo, queijo cheddar, presunto e salada.',
+            valor: '16,49',
+            price: 16.49,
+            image: './img/Burger/LetsFrango 1.png'
         },
         {
-            name: 'Cheese Burger 32',
-            description: 'Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.',
-            valor: '11,90',
-            price: 11.90,
-            image: './img/bg-2 1.png'
+            name: "Let's Go Calafrango",
+            description: 'Calabresa fatiada 85g, frango em cubos 85g, ovo, queijo cheddar, presunto e salada.',
+            valor: '17,49',
+            price: 17.49,
+            image: './img/Burger/LetsCalafrango 1.png'
         },
         {
-            name: 'Cheese Burger 42',
-            description: 'Pão levinho de fermentação natural da Trigou, burger 160g, queijo prato e maionese da casa.',
-            valor: '12,90',
-            price: 12.90,
-            image: './img/bg-2 1.png'
+            name: "Let's Go Carne do Sol",
+            description: 'Carne do sol em cubos 190g, ovo, queijo cheddar, cebola caramelizada, presunto e salada.',
+            valor: '23,99',
+            price: 23.99,
+            image: './img/Burger/bg-2 1.png'
+        },
+        {
+            name: "Let's Go Alcatra",
+            description: 'Carne de alcatra em cubos 190g, ovo, queijo cheddar, cebola caramelizada, presunto e salada.',
+            valor: '26,49',
+            price: 26.49,
+            image: './img/Burger/LetsAlcatra 1.png'
         }
     ];
 
@@ -94,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
         burgerElement2.className = 'p-2 flex gap-2 items-center';
         burgerElement2.innerHTML = `
             <img src="${burger2.image}" alt="${burger2.name}" class="w-28 h-28 rounded-md">
-            <div>
+            <div class="w-full">
                 <p class="font-bold">${burger2.name}</p>
                 <p class="text-sm">${burger2.description}</p>
                 <div class="flex items-center gap-2 justify-between mt-2">
