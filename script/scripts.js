@@ -198,17 +198,20 @@ checkoutBtn.addEventListener("click", function(){
         return;
     }
     // enviar para o wpp
+    const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
     const cartItems = cart.map((item) => {
+
+        item.price = item.quantity * item.price
         return(
-            ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price.toFixed(2)} |`
+            `\n\n_x${item.quantity}_ *${item.name}*\n    '-> _R$${item.price.toFixed(2)}_`
         )
     }).join("")
 
-    const menssagem = encodeURIComponent(cartItems)
+    const menssagem = encodeURIComponent(cartItems + `\n\n*OBS:* ${obsInput.value}\n\nTOTAL: *R$${totalPrice.toFixed(2)}*\nPAGAMENTO: *${pagInput.value}*\nENDEREÇO: *${addressInput.value}*\n\n*Obrigado pela preferência!*`);
     const telefone = "82999211763"
 
-    window.open(`https://wa.me/${telefone}?text=${menssagem} Forma de Pagamento: ${pagInput.value} Endereço: ${addressInput.value} Observação: ${obsInput.value}`, "_balnk")
+    window.open(`https://wa.me/${telefone}?text=*_LET's GO BURGER_ - _MEU CARRINHO_*${menssagem} `, "_balnk")
 
     Toastify({
         text: "Pedido Finalizado! Por favor, acompanhar pelo whatsapp.",
@@ -236,7 +239,7 @@ function verificarHorario(){
     const hora = data.getHours();
     const diaSemana = data.getDay()
 
-    return hora >= 18 && hora < 23 && diaSemana !== 2;
+    return hora >= 18 && hora < 23 && diaSemana !== 1;
 }
 
 const spanHorario = document.getElementById("date-span")
