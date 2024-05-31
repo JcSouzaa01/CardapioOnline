@@ -209,7 +209,7 @@ checkoutBtn.addEventListener("click", function(){
     }).join("")
 
     const menssagem = encodeURIComponent(cartItems + `\n\n*OBS:* ${obsInput.value}\n\nTOTAL: *R$${totalPrice.toFixed(2)}*\nPAGAMENTO: *${pagInput.value}*\nENDEREÇO: *${addressInput.value}*\n\n*Obrigado pela preferência!*`);
-    const telefone = "82999211763"
+    const telefone = "82999889814"
 
     window.open(`https://wa.me/${telefone}?text=*_LET's GO BURGER_ - _MEU CARRINHO_*${menssagem} `, "_balnk")
 
